@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="工作,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="每个项目管理者都想要用工具提高效率">
+<meta name="keywords" content="工作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目管理工具">
+<meta property="og:url" content="http://yoursite.com/2018/10/16/项目管理工具/index.html">
+<meta property="og:site_name" content="ggkai&#39;s blogs">
+<meta property="og:description" content="每个项目管理者都想要用工具提高效率">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-66de94d97224e7ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-5943d05d633ce5da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-d8dd8d4dd29f5b1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-5724703999cc6217.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-bcccefef7c12548f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-6b2269c606bc82da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-4abb2a0465cc27f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-95f8956c0b2a3015.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-2865d66eb382d88a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-8b800ab5a8e7faba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-082a94a32080c69d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-64d633dd4c4ad599.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-52bb7769ea8bb702.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/187805-ee834d8c5645b446.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-21T02:38:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="项目管理工具">
+<meta name="twitter:description" content="每个项目管理者都想要用工具提高效率">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/187805-66de94d97224e7ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/16/项目管理工具/">
+
+
+
+
+
+  <title>项目管理工具 | ggkai's blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ggkai's blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/16/项目管理工具/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ggkai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ggkai's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">项目管理工具</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-16T12:33:37+08:00">
+                2018-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>每个项目管理者都想要用工具提高效率<br><a id="more"></a></p>
+<h1 id="员工项目管理"><a href="#员工项目管理" class="headerlink" title="员工项目管理"></a>员工项目管理</h1><blockquote>
+<p>M公司有很多项目，为公司内部设计的一个项目管理工具，仅在内部使用，它帮助员工管理好自己的工作任务，帮助项目管理者掌握及时的项目信息，并为公司人力资源协调提供数据基础。</p>
+</blockquote>
+<h2 id="故事背景"><a href="#故事背景" class="headerlink" title="故事背景"></a>故事背景</h2><p>公司采用项目制，每一个产品都会是一个或多个项目，按照产品版本或者功能分类把一个产品拆分成多个项目。公司项目数量很多，在多个项目并行开发时，会出现人力资源过饱和、分配不协调的情况（简单说就是有时候一些人忙，一些人闲）。</p>
+<p>公司采用项目绩效考核，项目绩效需要项目经理、员工完成一定数量的项目任务，除此之外，项目还分为ABC不同等级，使用不同的计算方式。</p>
+<p>员工的项目管理一直采用电子＋纸质的管理流程，具体说就是，用excel表格填写完表格，每周定期填写，月末打印签字提交，相关的管理员会不定期抽查。</p>
+<p>公司成立了项目委员会，专门负责项目的提案、立项等管理工作。这个项目由项目委员会发起，为项目管理提供一些统计数据，全面了解公司整体的人力分配的情况，比如哪些项目占有的资源多，包括人力和时间，因为项目是分等级的，所以将足够的资源分配到主要的项目上去，就需要足够的数据作为管理和协调的支撑。<br>需求方项目委员会，希望将现有的电子＋纸质的流程电子化作为项目前期的切入点，一方面节省员工打印，找人签字的时间，一方面为项目管理者提供项目进展管理的便利，减轻一些流程负担，在手机上可以便携的查看和操作。</p>
+<p>项目由移动端网页和管理后台组成，在M公司的微信服务号上加入一个网页入口。理解了公司项目运转的背景之后，下面做一些基本的分析：</p>
+<h2 id="设计前的分析工作"><a href="#设计前的分析工作" class="headerlink" title="设计前的分析工作"></a>设计前的分析工作</h2><p>结合公司实际的工作方式和项目流程，下面先介绍业务，然后挖掘一些问题点，再着手考虑设计。<br><strong>Step 1: 业务分析</strong><br>项目参与者（对我来说也是目标用户），大概归纳为三个角色，分别为T员工（对员工的一种称呼）、项目经理（大部分是纯管理者、少数既是T员工又是管理者）、项目委员会。</p>
+<pre><code>M公司对不同员工的管理方式不一样，比如试用期员工、生产员工，T员工是一类员工的称呼
+</code></pre><p>PM整理了现有项目流程，做一个简单陈述，如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-66de94d97224e7ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="项目流程"></p>
+<p><strong>项目委员会</strong></p>
+<ul>
+<li>立项</li>
+<li>确定项目成员</li>
+<li>制定项目整体计划</li>
+<li>项目计划变更</li>
+</ul>
+<p><strong>项目经理</strong></p>
+<ul>
+<li>项目成员详细工作计划</li>
+<li>确认员工实际工作</li>
+</ul>
+<p><strong>T员工</strong></p>
+<ul>
+<li>填写档期</li>
+</ul>
+<p><strong>Step 2:寻找设计点</strong><br>现有项目流程，大家都需要去遵守。设计前做了一些调查工作，不同角色有不同的诉求，寻找一些问题点并试图寻找解决办法，也是这个工具提升价值的点。<br><strong>T员工</strong></p>
+<ol>
+<li><strong>忘记填表</strong>T员工的填表时间，每周五一次，经常会忘记，会有人来催，跟绩效挂钩，大家会相互提醒<pre><code>思考：每周填写一次，并不能及时的反馈进度，而且容易忘记，需求方希望每天填表养成工作习惯。与以往的工作习惯会有冲突，担心短时间难适应，我提出了一些质疑。
+</code></pre></li>
+<li><strong>延迟提交</strong>每月月末提交，如果请假就会延迟提交，给收集资料的同事带来麻烦<pre><code>思考：出差或者不在电脑面前，在手机上可以完成。查看填写记录、再补交会比较灵活。
+</code></pre></li>
+<li><strong>签字麻烦</strong>因为打印签字，每个月都有某个一天，打印机忙个不停，办公室人头攒动，大家放下手中的工作，只为了找到项目组的项目经理签字，如果项目经理找不到或者出差就会影响所有人<pre><code>思考：在线提交审核机制，解决这个问题。
+</code></pre></li>
+<li><strong>会议依赖</strong>如果项目会议没有正常举行，大家就没有办法实时了解进展，在软硬件的工作流程中，大家彼此不了解，一个环节时间没有按时完成就会影响其他人的工作。<pre><code>思考：让项目成员了解到其它人的工作计划和进度，更好的规划自己的工作
+</code></pre></li>
+<li><strong>信息不明</strong>不知道什么原因，填表时大家会经常相互询问项目名称是什么。私底下习惯的称呼和文档中的一长串代码不一样，我有时候交互做完了，找PM问项目名称无果。<pre><code>思考：项目名称、工作计划、项目成员在项目添加的时候就确认下来，随时查看。
+</code></pre></li>
+<li><strong>计划工作难</strong>工作时间评估本来就是一个靠经验又环环相扣的事情，需求变更、反复修改和不确定因素会使得工作计划难以评估，公司暂时没有统一的工作时间评估方法，大家靠着经验和反复讨（si）论（bi）。<pre><code>思考：支持计划变更，让员工、项目经理修改
+</code></pre></li>
+</ol>
+<blockquote>
+<p>举例，参与的一个项目中，项目经理出差，耽搁了一个会议时间（前后2周），出现了一个问题没有及时协调好，就导致项目延期了。</p>
+</blockquote>
+<p><strong>项目经理</strong></p>
+<ol>
+<li><strong>各种会议</strong>项目经理的工作非常有赖于及时发现问题并协调解决，为了掌握项目实时进度，需要组织大小会议<pre><code>思考：组织会议必不可少，查看在线工作进度可以作为会议基础。
+</code></pre></li>
+<li><strong>琐碎</strong>像小蜜蜂一样，每天都会在不同部门之间晃悠了解进度，十分的琐碎。<pre><code>思考：还没有很好的办法有效缓解。
+</code></pre></li>
+<li><strong>文案工作重</strong>处理文案、流程工作会很多的工作时间。做一个项目例会的PPT、进度excel表格都会花费很多时间，项目计划的修改、变更的文案编辑也很繁重。<pre><code>思考：以前需要项目经理收集，再整理表格，将所有人的记录工作直接汇总，减少一部分工作负担，将项目经理的身份从一个文案编辑者变为审核者，利用琐碎时间在手机上处理，不再过多的挤压工作时间。
+</code></pre></li>
+<li><strong>多重角色</strong>有些项目经理既是部门的负责人又是项目经理，还可能由工程师担当。一个人需要同时扮演不同角色，在不同的项目中穿插。<pre><code>思考：T员工角色重点是填表，管理角色重点安排和管理，细分一个使用群体，他们既是管理者又是某个项目的成员，将成员的功能和管理的功能分开。
+</code></pre></li>
+</ol>
+<p><strong>项目委员会</strong><br>前期的重点是在后台收集跟以前一样的项目数据，为后面的工作做数据支撑。</p>
+<p><strong>Step 3:难点预估</strong><br><strong>习惯改变</strong><br>T员工的填表时间改变，在手机的填表操作与excel上不同，项目管理者需要在手机上处理一些工作流程，工作习惯的改变需要时间适应。</p>
+<p><strong>规范化不够</strong><br>公司制度规范化不够，在线的提交和审核机制并没有设定得十分严格，项目的变更和计划修改也由前期的线上处理改为了后台处理，讨论后确定后再求修改。</p>
+<p><strong>工作计划</strong><br>方式一：项目成员填写计划提交审核，可以节省项目经理的工作量，会增加前期项目管理的可控性。<br>方式二：项目经理来制定工作计划再由项目成员确认，项目经理反馈说制定合理的计划难度很大。<br>最终方式：最后采取的方式是由项目经理和项目委员会根据市场要求和开发计划制定一个初步的计划，为项目成员安排工作计划，项目成员确定后开始执行，过程中可以变更和修改。</p>
+<h2 id="设计方案"><a href="#设计方案" class="headerlink" title="设计方案"></a>设计方案</h2><blockquote>
+<p>在项目的分析和了解过程中，对工作难点和设计点有了逐步深入的认识，配合PM和需求方反复调整了设计方案。</p>
+</blockquote>
+<h3 id="设计方案（员工篇）"><a href="#设计方案（员工篇）" class="headerlink" title="设计方案（员工篇）"></a>设计方案（员工篇）</h3><p>填表是最重要的事情，但没有人愿意在填表上花费大量的时间，所以信息架构上我将填表作为主界面，把其它的浏览信息放入了“我”中。<br>组织架构：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-5943d05d633ce5da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="信息架构－员工篇"><br>界面：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-d8dd8d4dd29f5b1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="员工界面"></p>
+<p>在前面分析的基础上我们将用户（T员工）的操作任务按场景拆分，如下：</p>
+<ul>
+<li>每周填表。</li>
+<li>例行查看项目信息</li>
+<li>掌握项目成员工作进度</li>
+</ul>
+<p><strong>场景一：每周更新</strong><br>鼓励每天填写，保持每周提交一次，周末可能加班，每周五填写时间改为每周一。填表界面包含了时间属性、这个T员工参与的项目列表，计划工作、实际工作</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-5724703999cc6217.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="档期表"></p>
+<p>时间周期以周为单位，默认显示本周，会自动更新，用户也可以左右滑动切换时间，查看前后一周的实际工作和工作安排。我们在视觉上对不同项目进行了标记，点的颜色、数量对应于项目、项目数量，任何时候进到这个界面都可以一览所有的项目和工作计划。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-bcccefef7c12548f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="计划"><br>在项目列表上勾选某个项目表示你在某天已经完成了某项工作。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-6b2269c606bc82da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="项目列表"></p>
+<p><strong>场景二：例行查看</strong><br>了解项目信息，随时查看项目名称、项目成员、项目进展，还可以查看个人项目补贴。特别是对项目中间加入的成员，可以增加一些对项目的了解。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-4abb2a0465cc27f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我"><br>在参与项目中了解项目的信息。公司要求每个T员工每天至少参与3个项目（规定就是这样），PM提出要让T员工了解自己是否达标，所以在这个界面增加了一个月历，在月历上面标记了是否完成了三个项目。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-95f8956c0b2a3015.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="参与项目"></p>
+<p>每个员工都关心自己的项目补贴，这里提供了便利（由于一些原因我们无法显示补贴金额，又让这个功能失去了作用，就作为参考吧。）</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-2865d66eb382d88a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="补贴详情"><br>我的档期中可以查看历史，作为工作记录，也可以从状态标记（已提交、未提交、已确认等）了解档期状态，如果你忘记提交了，主界面已经显示新的一周工作，在这里就会显示未提交。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-8b800ab5a8e7faba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的档期"><br><strong>场景三：新项目来了</strong><br>一旦T员工有了新项目，就可以在参与项目中查看，确认自己的工作计划。考虑到工作计划的操作难度，依然保持原有方式面对面或者开会讨论清楚后，再由后台录入。</p>
+<h2 id="设计方案（项目经理篇）"><a href="#设计方案（项目经理篇）" class="headerlink" title="设计方案（项目经理篇）"></a>设计方案（项目经理篇）</h2><p>对项目经理而言，最重要的是项目管理，所以界面会有所差异。<br>组织结构：<br><img src="http://upload-images.jianshu.io/upload_images/187805-082a94a32080c69d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="信息架构－项目经理篇"><br>界面：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-64d633dd4c4ad599.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="项目经理界面"><br>在前面分析的基础上我们也将用户（项目经理）的操作任务按场景拆分，如下：</p>
+<ul>
+<li>项目计划管理</li>
+<li>流程处理</li>
+<li><p>新项目工作计划</p>
+<p><strong>场景一：项目计划管理</strong><br>让项目经理进行实时跟踪、及时调整、按时完成。界面包括时间属性、工作安排信息，项目成员以及变更操作。项目经理按月进行查看支持左右滑动切换，用颜色标记项目立项截至时间点、是否有工作安排，点击某一天会高亮当天有工作安排的项目成员，点击某个员工会在日历上高亮该员工所有的时间安排</p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-52bb7769ea8bb702.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="项目管理.png"><br> <strong>场景二：流程处理</strong><br>不用再打印签字了，在成员档期表管理中就可以去确认。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/187805-ee834d8c5645b446.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="项目经理－流程处理.png"><br> <strong>场景三：计划工作</strong><br>一旦有了新项目，项目经理就需要为项目召集项目成员，制定工作计划，考虑到工作计划的操作难度，依然保持原有方式面对面或者开会讨论清楚后，再由后台录入。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我一直对任务协同和管理有着很高的兴趣，在为这个项目工作的这段时间，对项目管理有了更多了解，也留下了一些遗憾：设计过程中，我的交互思路得到了项目小组的认可，但一直没有机会去在内部员工中做更大范围原型测试，我错过了一个深入了解用户的机会。</p>
+<p>补充：<br>项目管理工具的设计我有了一些启发，记录如下：<br>任务管理方式和时间管理方式，它们的侧重点我感觉到了一些不同。</p>
+<ul>
+<li><p><strong>任务管理方式</strong><br><strong>特点</strong>关注工作目标的任务拆分、某个任务的完成度、任务难度。任务管理的思路下，我们可以更多的关注完成质量，深入的讨论某个细节。只要任务拆分合理，就可以很好的进行任务完成度的统计，过程中发现什么问题，也能够很好的针对解决。<br><strong>适用性</strong>适用于技术性强、可分解的细节的工作中，这种方式可以比较好的引入团队的流程化和分工协作。<br><strong>难点</strong>难点在于任务的拆分，需要很有经验，熟悉方方面面的人来做。<br><strong>现实</strong>我用过一些流行的任务管理工具（比如奇妙清单、todoist）管理自己的工作和日常任务，如果要和其它人协同完成一个工作需要大家使用同一个工具，有一套相互认可的工作记录方式，还要拆分任务，管理自己的任务，大家习惯不一样，门槛很高，沟通也不是十分便利，所以我几乎只做自我任务的管理，用久了后我的任务列表自然就留下了很多待处理任务和一堆提醒，比如我准备下午去还书，而我忘记了，我改天再去还书之后又忘记勾选已完成。还有就是放弃完成一些不合理任务后，还需要花时间去整理删除，也比较烦人。<br>在团队协作方面（比如Trello、Teambition），我会感觉这些工具很复杂，需要大家有一套相互认可的工作流程，对一些时间性不强、不需要紧密协同的工作中，显得繁琐、不够灵活，虽然宣称除了互联网团队项目也可以做其它任务管理（比如Teambition），但我真的说服不了其他人一起尝试。</p>
+</li>
+<li><p><strong>时间管理方式</strong><br><strong>特点</strong>关注任务的及时性、任务的整体时间进度和期限、预防和处理延期。时间管理的思路下，更多的关注几个关键时间节点，对质量和完成度的关注不会很高，有时候为了按时完成，可以牺牲质量。<br><strong>适用性</strong>适用于比较随意，时间属性很强，跟其它任务关联性比较低（受其他任务的完成影响较小）协同的紧密性不高的工作<br><strong>难点</strong>能够及时问题的发生和协调解决<br><strong>现实</strong>我身边有人用日历做自己任务管理，时间属性很强，也比较简单灵活，找到自己喜欢的方式，就可以管理好自己的事情。</p>
+</li>
+</ul>
+<p>现实中，有些事情适合用任务的方式管理，有些事情适合用时间的方式管理。我们的认知习惯也是这样，有时候很严谨有时候很随意，一个好的任务管理工具（定位更宽泛），应该对两种方式灵活的支持。为了让所有人都能够使用还需要增加简单灵活性</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工作/" rel="tag"># 工作</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/16/车载电台/" rel="next" title="车载电台">
+                <i class="fa fa-chevron-left"></i> 车载电台
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/16/产品策划的思路/" rel="prev" title="产品策划的思路">
+                产品策划的思路 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ggkai</p>
+              <p class="site-description motion-element" itemprop="description">重拾理想</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#员工项目管理"><span class="nav-number">1.</span> <span class="nav-text">员工项目管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#故事背景"><span class="nav-number">1.1.</span> <span class="nav-text">故事背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计前的分析工作"><span class="nav-number">1.2.</span> <span class="nav-text">设计前的分析工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计方案"><span class="nav-number">1.3.</span> <span class="nav-text">设计方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计方案（员工篇）"><span class="nav-number">1.3.1.</span> <span class="nav-text">设计方案（员工篇）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计方案（项目经理篇）"><span class="nav-number">1.4.</span> <span class="nav-text">设计方案（项目经理篇）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ggkai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

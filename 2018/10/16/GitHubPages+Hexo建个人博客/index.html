@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="工作,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="在朋友的帮助下建立了自己的个人博客，以后会慢慢更新，至此，人生的任务清单中，又少了一项">
+<meta name="keywords" content="工作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHubPages+Hexo建立个人博客">
+<meta property="og:url" content="http://yoursite.com/2018/10/16/GitHubPages+Hexo建个人博客/index.html">
+<meta property="og:site_name" content="ggkai&#39;s blogs">
+<meta property="og:description" content="在朋友的帮助下建立了自己的个人博客，以后会慢慢更新，至此，人生的任务清单中，又少了一项">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-21T02:38:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GitHubPages+Hexo建立个人博客">
+<meta name="twitter:description" content="在朋友的帮助下建立了自己的个人博客，以后会慢慢更新，至此，人生的任务清单中，又少了一项">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/16/GitHubPages+Hexo建个人博客/">
+
+
+
+
+
+  <title>GitHubPages+Hexo建立个人博客 | ggkai's blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ggkai's blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/16/GitHubPages+Hexo建个人博客/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ggkai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ggkai's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">GitHubPages+Hexo建立个人博客</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-16T22:28:59+08:00">
+                2018-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在朋友的帮助下建立了自己的个人博客，以后会慢慢更新，至此，人生的任务清单中，又少了一项<br><a id="more"></a></p>
+<h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><ol>
+<li>godaddy购买<a href="https://sg.godaddy.com/zh" target="_blank" rel="noopener">域名</a></li>
+<li>管理DNS<br>GoDaddy&gt;管理域名&gt;管理DNS<br>删除所有类型为A的记录,添加两条记录:<ul>
+<li>类型为”A (Host)” ，”主机” 为 @ ， “指向” = 192.30.252.153</li>
+<li>类型为”A (Host)” ，”主机” 为 @ ， “指向” = 192.30.252.154<blockquote>
+<p>github pages提供的域名，192.30.252.153和192.30.252.154</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="创建github-pages"><a href="#创建github-pages" class="headerlink" title="创建github pages"></a>创建github pages</h2><ol>
+<li>创建repo<br>repo name：username.github.io</li>
+<li>绑定域名<br>cname文件中添加域名</li>
+</ol>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><ol>
+<li>安装Node.js<br>去<a href="https://nodejs.org" target="_blank" rel="noopener">官网</a>下载安装最新版本<blockquote>
+<p>node -v #查看node版本<br> npm -v #查看npm版本</p>
+</blockquote>
+</li>
+<li><p>安装Git配置SSH</p>
+<ul>
+<li>xcode自带Git</li>
+<li><p>配置SSH   </p>
+<ul>
+<li>cd ~/.ssh #检查是否有ssh，No such file or directory 表示没有</li>
+<li>ssh-keygen -t rsa -C “邮件地址@youremail.com” #生成SSH输入密码串</li>
+<li>/Users/your_user_directory/.ssh/id_rsa.pub #打开ssh文件，复制key</li>
+<li>Account Settings—&gt;SSH Public keys —&gt; add another public keys #粘贴key，添加设备title，addkey</li>
+<li>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>#测试</li>
+<li>YES</li>
+<li>git config –global user.name “yourname” #用户名</li>
+<li>git config –global user.email  “<a href="mailto:youremail@gmail.com" target="_blank" rel="noopener">youremail@gmail.com</a>“ #填写自己的邮箱</li>
+</ul>
+<ul>
+<li>显示隐藏文件。切换快捷键：Command+Shift+.（点）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>安装hexo  </p>
+<ul>
+<li>sudo npm install -g hexo-cli #安装hexo</li>
+<li>hexo -v #查看版本，是否安装成功</li>
+</ul>
+</li>
+<li><p>初始化hexo</p>
+<ul>
+<li>mkdir blog #常见博客文件夹名称</li>
+<li>cd blog #进入博客文件</li>
+<li>hexo init #初始化</li>
+<li>hexo server或者hexo s #启动hexo</li>
+</ul>
+</li>
+<li><p>下载hexo主题</p>
+<ul>
+<li>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> themes/next #在themes创建主题</li>
+</ul>
+</li>
+<li><p>配置Hexo  </p>
+<ul>
+<li><p>打开根目录的_config.yml配置文件</p>
+<blockquote>
+<p>title #网站名称<br>description #网站描述<br>author #作者<br>language:zh-CH #语言<br>theme: next #配置主题<br>type:git #配置部署信息<br>repository:<a href="https://github.com/ggkai/ggkai.github.io.git" target="_blank" rel="noopener">https://github.com/ggkai/ggkai.github.io.git</a><br>branch:master</p>
+</blockquote>
+</li>
+<li><p>配置主题风格</p>
+<blockquote>
+<p>next下的主题配置文件_config.yml，并在其中搜索scheme属性，注释掉不使用的加#，使用的去掉#</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ol>
+<li>创建博客<ul>
+<li>cd blog</li>
+<li>hexo new “blogname” #在blog/source/_posts中就会看到一个blogname.md的文件</li>
+</ul>
+</li>
+<li>编辑文章<ul>
+<li>title: postName #文章的名称，可以任意修改，不会出现在URL中</li>
+<li>date: 2015-04-25 15:30:16 #文章的时间，一般不改，当然也可以任意修改</li>
+<li>categories: #文章的分类目录，可以为空</li>
+<li>tags: #文章的标签，多标签请用格式[tag1,tag2,tag3]，可以为空</li>
+<li>description: #本页的描述，可以为空<blockquote>
+<p>需要注意的是，上面所有冒号:后面必须要有一个空格，不然会报错。</p>
+</blockquote>
+</li>
+<li>网站首页摘要，点击Read More链接打开全文：<blockquote>
+<p>-–<br>摘要<br>\<!--more--><br>正文</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>发布<ul>
+<li>hexo clean #清除缓存</li>
+<li>hexo generate #生成静态文件</li>
+<li>hexo server #启动本地服务器，默认端口4000’ctrl + c’关闭</li>
+<li>hexo deploy #部署到服务器</li>
+<li>hexo deploy -g 生成并部署</li>
+</ul>
+</li>
+<li>git远程同步<ul>
+<li>git status #查看更改  </li>
+<li>git add +A #添加更改  </li>
+<li>git commit #提交到本地  </li>
+<li>git push origin #同步到远程  </li>
+</ul>
+</li>
+</ol>
+<h2 id="多设备同步"><a href="#多设备同步" class="headerlink" title="多设备同步"></a>多设备同步</h2><ul>
+<li>安装nodejs</li>
+<li>安装git</li>
+<li>安装hexo<blockquote>
+<p>sudo npm install -g hexo-cli</p>
+</blockquote>
+</li>
+<li>clone 本仓库<blockquote>
+<p>git clone <a href="https://github.com/ggkai/blog-release.git" target="_blank" rel="noopener">https://github.com/ggkai/blog-release.git</a></p>
+</blockquote>
+</li>
+<li>npm install</li>
+</ul>
+<h2 id="建站问题"><a href="#建站问题" class="headerlink" title="建站问题"></a>建站问题</h2><ol>
+<li>报错<br>npm install hexo-deployer-git –save #重新 deploy 即可<blockquote>
+<p>Deployer not found:git  </p>
+</blockquote>
+</li>
+<li>域名绑定<br>/source目录中创建CNAME文件，记录 <a href="http://www.gogokai.com" target="_blank" rel="noopener">www.gogokai.com</a></li>
+<li>修改头像<br>如果想修改头像可以直接在主题的_config.yml文件里面修改、友情链接</li>
+<li>缓存问题<br>提交了更新但是没有文章内容，需要清理缓存<blockquote>
+<p>hexo clean#清除缓存，重新生成部署</p>
+</blockquote>
+</li>
+<li>图床<br>七牛图床，<a href="https://zhuanlan.zhihu.com/p/34747279" target="_blank" rel="noopener">教程</a></li>
+<li><p>报错  </p>
+<blockquote>
+<p>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
+</blockquote>
+<blockquote>
+<p>xcode-select –install</p>
+</blockquote>
+</li>
+<li><p>hexo server报错<br>错误：   </p>
+<blockquote>
+<p>ERROR Local hexo not found in E:\blog，ERROR Try running: ‘npm install hexo –save’</p>
+</blockquote>
+<p>解决方案：  </p>
+<blockquote>
+<p>cd blog<br> npm install<br> hexo server  </p>
+</blockquote>
+<p>原因分析：</p>
+<blockquote>
+<p>.gitignore文件里面忽略了node_modules文件夹，所以这个文件夹没有更新上去。所以用npm重新安装</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a><br><a href="https://www.jianshu.com/p/dfcae367aae6" target="_blank" rel="noopener">https://www.jianshu.com/p/dfcae367aae6</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工作/" rel="tag"># 工作</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/16/markdown常用技巧/" rel="next" title="markdown常用技巧">
+                <i class="fa fa-chevron-left"></i> markdown常用技巧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/19/mysql常用技巧/" rel="prev" title="mysql常用技巧">
+                mysql常用技巧 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ggkai</p>
+              <p class="site-description motion-element" itemprop="description">重拾理想</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#购买域名"><span class="nav-number">1.</span> <span class="nav-text">购买域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建github-pages"><span class="nav-number">2.</span> <span class="nav-text">创建github pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">3.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作"><span class="nav-number">4.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多设备同步"><span class="nav-number">5.</span> <span class="nav-text">多设备同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建站问题"><span class="nav-number">6.</span> <span class="nav-text">建站问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ggkai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

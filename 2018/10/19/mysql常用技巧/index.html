@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="因为工作需要，自学了一点mysql，因为不是程序员，有些用不到也就没有记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql常用技巧">
+<meta property="og:url" content="http://yoursite.com/2018/10/19/mysql常用技巧/index.html">
+<meta property="og:site_name" content="ggkai&#39;s blogs">
+<meta property="og:description" content="因为工作需要，自学了一点mysql，因为不是程序员，有些用不到也就没有记">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-21T02:38:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql常用技巧">
+<meta name="twitter:description" content="因为工作需要，自学了一点mysql，因为不是程序员，有些用不到也就没有记">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/19/mysql常用技巧/">
+
+
+
+
+
+  <title>mysql常用技巧 | ggkai's blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ggkai's blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/19/mysql常用技巧/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ggkai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ggkai's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">mysql常用技巧</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-19T10:14:15+08:00">
+                2018-10-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>因为工作需要，自学了一点mysql，因为不是程序员，有些用不到也就没有记<br><a id="more"></a></p>
+<h2 id="mysql安装和使用"><a href="#mysql安装和使用" class="headerlink" title="mysql安装和使用"></a>mysql安装和使用</h2><ol>
+<li><p>mysql安装和启动</p>
+<ul>
+<li>下载安装mysql</li>
+<li>系统偏好设置中启动mysql server</li>
+<li>终端中配置环境<blockquote>
+<p>第一步：打开终端,输入： cd ~<br>  会进入~文件夹<br>  第二步：然后输入：touch .bash_profile<br>  回车执行后<br>  第三步：再输入：open -e .bash_profile 会在TextEdit中打开这个文件<br>  第四步：在结束符前输入export PATH=${PATH}:/usr/local/mysql/bin<br>  第五步：然后，保存，退出TextEdit（一定是退出），关闭终端并退出。</p>
+</blockquote>
+</li>
+<li>登录命令：mysql -u root -p</li>
+<li>启动MySQL服务<blockquote>
+<p>sudo /usr/local/MySQL/support-files/mysql.server start</p>
+</blockquote>
+</li>
+<li>重启MySQL服务<blockquote>
+<p>sudo /usr/local/mysql/support-files/mysql.server restart</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>homebrew安装mysql</p>
+</li>
+<li><p>mysql修改root密码</p>
+<ul>
+<li>停止MySQL服务<blockquote>
+<p>sudo /usr/local/mysql/support-files/mysql.server stop</p>
+</blockquote>
+</li>
+<li>禁止mysql的验证密码<blockquote>
+<p>cd /usr/local/mysql/bin<br>sudo su ./mysqld_safe –skip-grant-tables &amp;</p>
+</blockquote>
+</li>
+<li>打开新终端<blockquote>
+<p>/usr/local/mysql/bin/mysql -u root -p 直接enter</p>
+</blockquote>
+</li>
+<li>设置新密码<blockquote>
+<p>UPDATE mysql.user SET authentication_string=PASSWORD(‘新密码’) where User=’root’;</p>
+</blockquote>
+</li>
+<li>刷新<blockquote>
+<p>FLUSH PRIVILEGES;</p>
+</blockquote>
+</li>
+<li>重启mysql<blockquote>
+<p>mysql -u root -p<br>输入新密码</p>
+</blockquote>
+</li>
+<li>重设置密码<blockquote>
+<p>show databases;<br>SET PASSWORD = PASSWORD(‘新密码’);</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>mysql命令行<ul>
+<li>连接数据库<blockquote>
+<p>mysql -u 用户名 -p -h 主机名 -P 端口</p>
+</blockquote>
+</li>
+<li>选择数据库<blockquote>
+<p>user database</p>
+</blockquote>
+</li>
+<li>创建数据库<blockquote>
+<p>create database</p>
+</blockquote>
+</li>
+<li>数据库描述<blockquote>
+<p>show databeses显示数据库信息<br> show table显示表信息<br> show columns from table显示列信息<br> show status显示服务器状态信息<br> show create database显示创建特定数据库<br> show create table显示创建特定表<br> show grants显示用户权限<br> show errors和show warnings显示服务器错误、警告消息</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>数据导入<br>通过navicat导入数据，需要设置主键才能追加，导入模式包括：追加、更新、删除、复制、追加和更新</p>
+</li>
+<li><p>复制表<br>复制表结构：create table 新表 like 旧表<br>复制表结构及数据：create table新表 select * from 旧表 </p>
+</li>
+<li><p>创建索引<br>索引也是一张表，该表保存了主键与索引字段，并指向实体表的记录，建立索引会占用磁盘空间的索引文件，索引大大提高了查询速度，同时却会降低更新表的速度，如对表进行INSERT、UPDATE和DELETE，因为更新表时，MySQL不仅要保存数据，还要保存一下索引文件。</p>
+<ul>
+<li>查看某张表的索引<blockquote>
+<p>show index from 表名；</p>
+</blockquote>
+</li>
+<li>创建普通索引<blockquote>
+<p>alter table 表名 add index  索引列名</p>
+</blockquote>
+</li>
+<li>创建聚合索引<blockquote>
+<p>alter table 表名 add index  (索引列1,索引列2) </p>
+</blockquote>
+</li>
+<li>删除某张表的索引<blockquote>
+<p>drop index 索引名 on 表名;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>视图<br>利用视图简化复杂的联结查询</p>
+<ul>
+<li>创建视图<blockquote>
+<p>create view</p>
+</blockquote>
+</li>
+<li>查看创建的视图<blockquote>
+<p>show create view viewname</p>
+</blockquote>
+</li>
+<li>删除视图<blockquote>
+<p>drop view viewname</p>
+</blockquote>
+</li>
+<li>更新视图<blockquote>
+<p>create or replace view</p>
+</blockquote>
+</li>
+<li>在视图上查询<blockquote>
+<p>select * from viewname</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>mysql不区分大小写</p>
+</li>
+<li><p>explain<br>解释mysql如何使用索引来处理select语句以及连接表，帮助选择更好的索引和写出更优化的查询语句</p>
+<blockquote>
+<p>explain select…</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h2><blockquote>
+<p>select子句顺序：select&gt;from&gt;where&gt;group by&gt;having&gt;oder by&gt;limit</p>
+<ol>
+<li>Select<ul>
+<li>select查询<br>SELECT 列名 FROM 表名 where 条件 OFFSET 偏移量 LIMIT 返回数据量</li>
+<li>查询table的所有列<br>select * (通配符) from…</li>
+<li>通过表名限定列名<br>select table.column from…</li>
+<li>select和where中使用表别名<br>select 表别名.列名 from table_name as name(表别名) where…</li>
+<li>列的算术计算<br>select a+b,a*b,a-b,a/b from table…</li>
+<li>测试计算和函数，省略from<br>select 3*2，返回6<br>select Trim(‘abc ‘)，返回abc<br>select Now()，返回当前日期时间</li>
+</ul>
+</li>
+<li>where<ul>
+<li>单个限定条件，字符需要用单引号<br>select <em> from table where column = ‘字符’<br>select </em> from table where column &gt;= 数值</li>
+<li>多个限定条件，优先级and&gt;or，搞不清顺序用括号()<br>select * from table where column1 = ‘字符’ and columns2 = ‘字符’ or column3 = ‘字符’</li>
+<li>限定内容范围，多个值逗号分隔<br>select <em> from table where column in (a,b,c)<br>select </em> from table where column not in (a,b,c)</li>
+<li>限定数值区间<br>select * from table where column between 100 and 200</li>
+<li>空值<br>select <em> from table where column is null;为null<br>select </em> from table where column is not null;不为null<br>select * from table where column !=’’;不为空值</li>
+<li>模糊条件，like可以代替=<br>select * from table where column like ‘%M%’</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<pre><code>&gt;% 表示0个、1个、多个字符  
+ _ 下划线表示一个字符  
+ M% 表示查询以M开头的内容  
+ %M% 表示查询包含M的所有内容  
+ %M_ 表示查询以M在倒数第二位的所有内容  
+</code></pre><ol>
+<li><p>group by</p>
+<ul>
+<li><p>group by列</p>
+<blockquote>
+<p>select * from table group by column</p>
+</blockquote>
+<blockquote>
+<p>分组中有多行null，会分为一行null</p>
+</blockquote>
+</li>
+<li>在显示的列上使用COUNT, SUM, AVG,MAX等聚合函数<blockquote>
+<p>select count(*) from table group by column</p>
+</blockquote>
+</li>
+<li>数据去重<blockquote>
+<p>select count(distinct,column) from table group by column</p>
+</blockquote>
+</li>
+<li><p>汇总列</p>
+<blockquote>
+<p>SELECT COALESCE(column,’汇总’) FROM table GROUP BY column WITH ROLLUP;</p>
+</blockquote>
+<blockquote>
+<p>coalesce 来设置一个汇总<br>WITH ROLLUP对一列进行汇总</p>
+</blockquote>
+</li>
+<li><p>列别名</p>
+<blockquote>
+<p>select column as 列别名 from table where…</p>
+</blockquote>
+<blockquote>
+<p>group by子句中不能使用这个列别名</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>having</p>
+<ul>
+<li>group by汇总后进行限制<blockquote>
+<p>SELECT column1, SUM(column2)  FROM table GROUP BY column1 HAVING SUM(column2)&gt;100</p>
+</blockquote>
+</li>
+<li>替代where过滤<blockquote>
+<p>select *  from table having count(column) &gt;100</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>order by</p>
+<ul>
+<li>ASC升序，DESC降序<blockquote>
+<p>select column as new_name from table group by column order by new_name desc</p>
+</blockquote>
+</li>
+<li>多条件排序<blockquote>
+<p>select * from table group by column order by column1 desc,column2 asc</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>limit</p>
+<ul>
+<li><p>limit x，返回前x行</p>
+<blockquote>
+<p>select * from table GROUP BY column ORDER BY column  limit 100</p>
+</blockquote>
+</li>
+<li><p>limit x,y，表示从x行开始的y行数据</p>
+<blockquote>
+<p>select * from table where column &gt; 100 limit 10,100;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>join<br>联合多表查询，Join默认是Inner Join即内联接</p>
+<blockquote>
+<p>select * from table1 join table2 on table1.column2 = table2.column2</p>
+</blockquote>
+</li>
+<li><p>union<br>连接两个以上的SELECT语句的结果组合到一个结果集合中</p>
+<blockquote>
+<p>SELECT <em> FROM tables WHERE conditions<br>UNION [ALL | DISTINCT]<br>SELECT </em> FROM tables WHERE conditions</p>
+</blockquote>
+<blockquote>
+<p>DISTINCT: 默认，去掉重复数据<br>ALL: 包含重复数据</p>
+</blockquote>
+</li>
+<li><p>DISTINCT<br>去掉列重复数据，放到所有列名前</p>
+<blockquote>
+<p>SELECT DISTINCT 列名1,列名2 FROM 表名</p>
+</blockquote>
+</li>
+<li><p>嵌套子查询</p>
+<ul>
+<li><p>where嵌套，一般与in、=、!=配合使用</p>
+<blockquote>
+<p>select <em> from tableA where column1 in (select </em> from tableB where column2 =xxx)</p>
+</blockquote>
+<blockquote>
+<p>select <em> from tableA where column1 = (select </em> from tableB where column2 =xxx)</p>
+</blockquote>
+<blockquote>
+<p>select <em> from tableA where column1 &gt; all(select </em> from tableB where column2 =xxx)</p>
+</blockquote>
+</li>
+<li><p>select嵌套</p>
+<blockquote>
+<p>SELECT (SELECT * FROM table1 WHERE conditions ) AS column FROM table2</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>SELECT function(列) FROM 表</p>
+<ol>
+<li><p>Aggregate聚合函数</p>
+<blockquote>
+<p>AVG() 返回平均值<br>COUNT()  返回行数<br>FIRST() 返回第一个记录的值<br>LAST() 返回最后一个记录的值<br>MAX() 返回最大值<br>MIN()  返回最小值<br>SUM()  返回总和<br>std()  返回标准差<br>var()  返回方差</p>
+</blockquote>
+</li>
+<li><p>Scalar函数</p>
+<blockquote>
+<p>UCASE() 将某个字段转换为大写<br> LCASE() 将某个字段转换为小写<br> Substr(字符串，从哪里开始截，截取长度)提取子字符串<br> LEN()  返回某个文本字段的长度<br> ROUND(数字，位数) 小数四舍五入<br> NOW() 返回当前的系统日期和时间<br> FORMAT() 格式化某个字段的显示方式  </p>
+</blockquote>
+</li>
+<li><p>concat()<br>字符串拼接</p>
+<ul>
+<li><p>concat(a,b)</p>
+<blockquote>
+<p>select concat(A,B) as name from table…</p>
+</blockquote>
+</li>
+<li><p>CONCAT_WS(separator,str1,str2)</p>
+<blockquote>
+<p>select concat(-,A,B) as name from table…返回A-B</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>str_to_date()<br>把字符串转换为日期</p>
+<blockquote>
+<p>select str_to_date(‘2008-4-2 15:3:28’,’%Y-%m-%d %H:%i:%s’);</p>
+</blockquote>
+<blockquote>
+<p>select str_to_date(‘2008-08-09 08:9:30’, ‘%Y-%m-%d %h:%i:%s’);</p>
+</blockquote>
+</li>
+<li><p>时间日期函数<br>日期时间必须用单引号</p>
+<blockquote>
+<p>date()返回日期<br> dayofweek()返回星期几，默认周日第1天<br> Time()返回时间<br> year()返回年<br> month()返回月份<br> week(date,mode)返回周数，mode=0，表示周日是第1天，mode=1，表示周一是第1天</p>
+</blockquote>
+</li>
+<li><p>Date_Format(date,format)<br>format是’%Y-%m-%d %H:%i:%s’表示为’年-月-日 时:分:秒’</p>
+</li>
+</ol>
+<ol>
+<li>sum(if())<blockquote>
+<p>select sum(if(条件, 累加值, 不满足条件时加值))…</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="SQLZoo题目练习"><a href="#SQLZoo题目练习" class="headerlink" title="SQLZoo题目练习"></a>SQLZoo题目练习</h2><ol>
+<li>有多少年沒有颁发诺贝尔医学奖<blockquote>
+<p>select count(distinct yr) from nobel where yr not in (SELECT distinct yr FROM nobel where subject=’Medicine’)</p>
+</blockquote>
+</li>
+<li>顯示所有國家名字,其首都是國家名字加上”City”<blockquote>
+<p>SELECT name  FROM world WHERE capital = concat (name,’ City’)</p>
+</blockquote>
+</li>
+<li>找出所有首都和其國家名字,而首都要有國家名字<blockquote>
+<p>SELECT capital,name  FROM world where capital like concat(‘%’,name,’%’)</p>
+</blockquote>
+</li>
+<li>找出所有首都和其國家名字,而首都是國家名字的延伸。你應顯示 Mexico City,因它比其國家名字 Mexico 長。你不應顯示 Luxembourg,因它的首都和國家名相是相同的<blockquote>
+<p>SELECT name, capital  FROM world WHERE capital like concat (name,’%’) and capital != name</p>
+</blockquote>
+</li>
+<li>“Monaco-Ville”是合併國家名字 “Monaco” 和延伸詞”-Ville”.顯示國家名字，及其延伸詞，如首都是國家名字的延伸<blockquote>
+<p>SELECT name, replace(capital,name,’’)  FROM world WHERE capital like concat (name,’%’) and capital != name</p>
+</blockquote>
+</li>
+<li>顯示歐洲的國家名稱name和每個國家的人口population。以德國的人口的百分比作人口顯示<blockquote>
+<p>select name,concat(round((population/(select population from world where name=’Germany’))*100,0),’%’) from world where continent =’Europe’ </p>
+</blockquote>
+</li>
+<li>哪幾年頒發了物理獎，但沒有頒發化學獎?<blockquote>
+<p>select distinct yr from nobel where yr in (select yr from nobel where subject=’Physics’) and yr not in( select yr from nobel where subject=’Chemistry’)</p>
+</blockquote>
+</li>
+<li>列出誰獲得多於一個诺贝尔獎項(Subject)<blockquote>
+<p>select winner from nobel group by winner having count(distinct subject)&gt;1</p>
+</blockquote>
+</li>
+<li>哪年哪獎項，是同一獎項(subject)頒發給3個人。只列出2000年及之後的資料<blockquote>
+<p>select yr,subject from nobel where yr&gt;=2000 group by yr,subject having count(subject)=3</p>
+</blockquote>
+</li>
+<li>列出1962年首影的電影及它的第1主角<blockquote>
+<p>select movie.title,actor.name from movie,actor,casting where movie.id=casting.movieid and casting.actorid=actor.id and casting.ord=1 and movie.yr=’1962’</p>
+</blockquote>
+</li>
+<li>列出演員茱莉·安德絲’Julie Andrews’曾參與的電影名稱及其第1主角。<blockquote>
+<p>select movie.title,actor.name  from movie,actor,casting where movie.id=casting.movieid and casting.actorid=actor.id and movieid in(select movieid from casting where actorid in (select actor.id from actor where  name=’Julie Andrews’)) and ord=1</p>
+</blockquote>
+</li>
+<li>列出演員茱莉·安德絲’Julie Andrews’曾主演的電影名稱<blockquote>
+<p>select movie.title  from movie,actor,casting where movie.id=casting.movieid and casting.actorid=actor.id and actor.name=’julie andrews’ and ord=1</p>
+</blockquote>
+</li>
+<li>列出1978年首影的電影名稱及角色數目，按此數目由多至少排列<blockquote>
+<p>select movie.title,count(actorid) from movie,casting where id=movieid and yr=1978  group by title order by count(actorid) desc</p>
+</blockquote>
+</li>
+</ol>
+<p>补充：<br><a href="https://dev.mysql.com/downloads/" target="_blank" rel="noopener">mysql下载</a><br><a href="https://navicat.com.cn" target="_blank" rel="noopener">navicat下载</a><br><a href="http://zh.sqlzoo.net" target="_blank" rel="noopener">SQLZoo在线练习</a><br><a href="http://www.w3school.com.cn/sql/" target="_blank" rel="noopener">w2school的sql教程</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/16/GitHubPages+Hexo建个人博客/" rel="next" title="GitHubPages+Hexo建立个人博客">
+                <i class="fa fa-chevron-left"></i> GitHubPages+Hexo建立个人博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/21/点/" rel="prev" title="点">
+                点 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ggkai</p>
+              <p class="site-description motion-element" itemprop="description">重拾理想</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql安装和使用"><span class="nav-number">1.</span> <span class="nav-text">mysql安装和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据查询"><span class="nav-number">2.</span> <span class="nav-text">数据查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLZoo题目练习"><span class="nav-number">4.</span> <span class="nav-text">SQLZoo题目练习</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ggkai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

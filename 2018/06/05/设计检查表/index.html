@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="工作,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="产品设计前期，建立一个设计检查表，在产品设计完后，对设计、逻辑和使用体验进行检查，避错补漏。检查内容可包括交互、UI、用户体验几个方面。">
+<meta name="keywords" content="工作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计检查表">
+<meta property="og:url" content="http://yoursite.com/2018/06/05/设计检查表/index.html">
+<meta property="og:site_name" content="ggkai&#39;s blogs">
+<meta property="og:description" content="产品设计前期，建立一个设计检查表，在产品设计完后，对设计、逻辑和使用体验进行检查，避错补漏。检查内容可包括交互、UI、用户体验几个方面。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-21T02:38:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计检查表">
+<meta name="twitter:description" content="产品设计前期，建立一个设计检查表，在产品设计完后，对设计、逻辑和使用体验进行检查，避错补漏。检查内容可包括交互、UI、用户体验几个方面。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/06/05/设计检查表/">
+
+
+
+
+
+  <title>设计检查表 | ggkai's blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ggkai's blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/05/设计检查表/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ggkai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ggkai's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">设计检查表</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T00:20:46+08:00">
+                2018-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>产品设计前期，建立一个设计检查表，在产品设计完后，对设计、逻辑和使用体验进行检查，避错补漏。检查内容可包括交互、UI、用户体验几个方面。<br><a id="more"></a></p>
+<h1 id="设计检查表（上）"><a href="#设计检查表（上）" class="headerlink" title="设计检查表（上）"></a>设计检查表（上）</h1><p><strong>兼容性</strong></p>
+<ul>
+<li>对不同设备、设备型号（iphone5\iphom6）的支持</li>
+<li>系统版本（iOS9\iOS10）的兼容性</li>
+<li>高\低分辨率下显示效果适配</li>
+<li>新增功能对应用旧版本的支持</li>
+<li>应用新版本对系统版本、设备型号、配置的要求</li>
+</ul>
+<p><strong>SD卡</strong></p>
+<ul>
+<li>储存位置选择，SD卡还是手机自身</li>
+<li>没有SD卡的情况下，数据是否正常存储</li>
+<li>SD卡储存已满，提醒用户删除数据还是更改储存选择</li>
+<li>数据存储位置，文字、图片、视频的存储路径</li>
+<li>SD卡文件在电脑中读取、导出是否方便</li>
+</ul>
+<p><strong>横竖屏</strong></p>
+<ul>
+<li>是否支持竖屏、横屏显示</li>
+<li>横竖屏时布局是否需要调整</li>
+<li>横竖屏哪些功能有、哪些没有</li>
+</ul>
+<p><strong>多设备</strong></p>
+<ul>
+<li>是否支持多屏互动，比如投影</li>
+<li>多设备同时登录，同时在线设备限制</li>
+<li>多设备登录方式，比如二维码登录或者账号登录</li>
+<li>多个设备数据同步是否及时、数据传输是否快速</li>
+<li>设备间互联，能否通过蓝牙、USB、WIFI连接</li>
+</ul>
+<p><strong>网络相关</strong></p>
+<ul>
+<li>网络依赖。依赖于网络的操作应该优先判断是否有网络</li>
+<li>无网络。在无网络情况下给出提示</li>
+<li>发送网络请求。显示全局菊花或局部菊花，根据界面需求，考虑是否中断屏幕全部操作、部分操作</li>
+<li>网络请求超时。在程序默认的等待时间内没有得到响应，网络请求超时时间是否合适，超时提示用户，比如网络不好，请稍后重试</li>
+<li>服务器响应超时，应该提示用户，比如系统服务繁忙，请稍后重试</li>
+<li>网络环境变化。从WiFi切换到3/4G网络环境，是否需要提示用户，如果在下载是否需要暂停</li>
+</ul>
+<p><strong>数据</strong></p>
+<ul>
+<li>空数据。未产生数据的情况下，界面需要提示用户，引导用户去产生数据</li>
+<li>加载前。比如图片加载前，默认图片</li>
+<li>数据请求和加载过程。显示菊花，根据界面需求，考虑是否中断屏幕操作</li>
+<li>数据加载。首次加载多少数据，一次加载多少数据，加载时间过长，显示加载进度</li>
+<li>数据加载失败，提示刷新，重新加载</li>
+<li>数据刷新。首次进入界面是否刷新，自动刷新列表，仅加载新数据，仅提示有新数据，手动刷新</li>
+<li>数据刷新和加载过程。比如列表刷新过程，下拉刷新，松开可以刷新，正在加载，加载完成</li>
+<li>数据缓存。缓存多少数据，自动清除缓存机制，手动清除缓存</li>
+<li>离线数据。是否可以离线浏览</li>
+<li>数据加载完。没有更多数据，提示用户数据加载完</li>
+<li>数据同步及更新。自动同步及同步规则，手动同步，数据冲突及规则，多端同步及更新</li>
+</ul>
+<p><strong>下载</strong></p>
+<ul>
+<li>下载过程显示下载进度</li>
+<li>下载失败提示用户</li>
+<li>标识下载失败状态</li>
+<li>下载成功提示用户</li>
+<li>标识下载成功状态</li>
+<li>是否支持断点续传、后台下载</li>
+<li>暂停下载，取消下载</li>
+</ul>
+<p><strong>上传</strong></p>
+<ul>
+<li>上传过程显示上传进度</li>
+<li>上传成功，提示用户</li>
+<li>标识上传成功状态</li>
+<li>上传失败，提示用户</li>
+<li>标识上传失败状态</li>
+<li>是否支持断点续传</li>
+<li>取消上传</li>
+</ul>
+<p><strong>出错提示</strong></p>
+<ul>
+<li>程序崩溃。程序应避免崩溃</li>
+<li>接口异常（接口异常、参数不符合要求）。由服务端返回提示内容或者由客服端自定义提示内容</li>
+<li>服务器异常。服务端返回，提示用户</li>
+<li>应该避免向用户描述<strong>接口异常</strong>，<strong> 用户ID错误 </strong>，<strong>404</strong>等专业名词</li>
+</ul>
+<p><strong>状态</strong></p>
+<ul>
+<li>初始值/建议值。提供用户建议的填写值</li>
+<li>默认状态。开关、下拉列表等是否有合理的默认选项。表单填写是否有合理的说明文字引导</li>
+<li>中间状态。类似下载，上传，导入，添加等操作都有一个过程，需要响应/等待时间，显示响应过程，比如正在保存、正在提交…是否支持取消或者返回、是否会中断屏幕操作</li>
+<li>完成或失败。操作结果给出必要的反馈、标识状态</li>
+</ul>
+<p><strong>权限</strong></p>
+<ul>
+<li>需要获取那些必需权限？</li>
+<li>权限没有打开，提示用户</li>
+<li>用户拒绝，提示用户允许</li>
+</ul>
+<p><strong>搜索</strong></p>
+<ul>
+<li>显性搜索还是自动完成<ul>
+<li>显性搜索：提供显性的搜索按钮，手动执行</li>
+<li>自动完成：在输入关键词的同时，即时提供一些根据已输入文字所猜测出来的搜索结果，直接点击就可以完成搜索，或者按照输入关键词搜索</li>
+</ul>
+</li>
+<li>是否需要动态筛选。当用户在搜索栏中输入关键词时，已有的搜索结果会随之进行动态的筛选（对已有的信息列表进行筛选）</li>
+<li>是否需要指定搜索范围，在搜索前选择搜索范围</li>
+<li>显示搜索过程，比如正在搜索中…</li>
+<li>搜索结果<ul>
+<li>无搜索结果，提示用户</li>
+<li>搜索结果的如何呈现？表格(table)、列表(list)、缩略图、地图？</li>
+<li>搜索结果是否需要归类或分组</li>
+<li>是否需要延迟加载（首先加载一部分搜索结果，同时另外一部分继续载入）</li>
+<li>加载更多搜索结果，自动加载还是手动触发</li>
+<li>是否需要让用户了解搜索结果的条目总数</li>
+<li>搜索结果提供合理的默认排序规则</li>
+</ul>
+</li>
+<li>是否需要保存最近的搜索条目，保存几条记录，删除或者清空搜索记录</li>
+<li>是否需要高级搜索，搜索表单中指定搜索范围，其他搜索条件</li>
+<li>取消当前搜索行为</li>
+</ul>
+<p><strong>筛选</strong></p>
+<ul>
+<li>应该在不脱离当前界面上下文环境的情况下提供各种筛选选项</li>
+<li>筛选方式切换。比如筛选切换、筛选对话窗、筛选表单<br>筛选切换。通过一次点击，用户可以对搜索结果进行进一步的筛选过滤<br>筛选对话窗。可以选择一个筛选项，或是取消对话框，避免滚动<br>筛选表单。将多个筛选项整合在一个筛选表单中</li>
+<li>显示当前的筛选方式</li>
+<li>考虑是否需要重置筛选条件</li>
+</ul>
+<p><strong>排序</strong></p>
+<ul>
+<li>默认的排序方式<ul>
+<li>字母排序</li>
+<li>数值排序，比如价格，销量，好评率的升序和降序</li>
+<li>距离排序，比如距离最近</li>
+<li>时间排序，比如倒序，顺序</li>
+<li>等级排序，比如用户等级</li>
+<li>相关性排序，按搜索关键词与内容的符合程序排序，比如相关性高、相关性低</li>
+<li>综合排序，根据权重计算综合分</li>
+</ul>
+</li>
+<li>排序方式切换。<ul>
+<li>排序切换。比如升序或降序切换</li>
+<li>排序选择器。比如时间选择（iOS使用picker或者action sheet；Android使用浮层菜单）</li>
+<li>排序表单。在一个界面中整合多种排序</li>
+</ul>
+</li>
+<li>表明当前的排序方式，比如视觉上呈现价格升序排列</li>
+</ul>
+<h1 id="设计检查表（下）"><a href="#设计检查表（下）" class="headerlink" title="设计检查表（下）"></a>设计检查表（下）</h1><p><strong>架构和导航</strong></p>
+<ul>
+<li>是否采用了用户熟悉、容易理解的结构？</li>
+<li>是否能识别当前在网站中的位置？</li>
+<li>是否能快速回到首页／主要页面？</li>
+<li>链接名称与页面名称是否相对应？</li>
+<li>当前页面的结构和布局是否清晰？</li>
+<li>信息架构是否高效</li>
+</ul>
+<p><strong>布局</strong></p>
+<ul>
+<li>是否采用了用户熟悉的界面元素控件？</li>
+<li>界面元素和控件的文字、位置、布局、分组、大小、颜色、形状等是否合理，容易识别、一致？</li>
+<li>界面元素、控件之间的关系是否表达正确？</li>
+<li>主要操作／阅读区域的视线是否流畅？</li>
+<li>信息层次是否清晰，重要的信息是否优先显示</li>
+<li>相关信息是否可合并，没有重复信息</li>
+<li>功能操作是否易操作，重要、频繁触发的功能按钮是否在手机的可操作区域</li>
+</ul>
+<p><strong>操作</strong></p>
+<ul>
+<li>是否保留数据和历史，让用户从上一次离开的地方继续</li>
+<li>是否告知、引导用户可以做什么？</li>
+<li>是否告知需要进行哪些步骤？</li>
+<li>是否告知需要多少时间完成？</li>
+<li>是否告知第一步做什么？</li>
+<li>是否告知输入／操作限制？</li>
+<li>是否有必要的系统、用户行为反馈？</li>
+<li>是否允许必要的撤销操作？</li>
+<li>是否页面上所有操作都必须由用户完成？</li>
+<li>是否已将操作步骤、点击次数减至最少？</li>
+<li>是否所有跳转都是必须的？</li>
+</ul>
+<p><strong>键盘类型</strong><br>为输入框选择合适的键盘类型</p>
+<ul>
+<li>标准键盘。一般是字母键盘，可以切换数字和标点符号</li>
+<li>数字键盘。一般是数字输入</li>
+<li>网址键盘。一般是输入网址</li>
+<li>邮箱键盘。一般是输入邮箱</li>
+<li>中文键盘。九宫格输入中文</li>
+</ul>
+<p><strong>其他</strong></p>
+<ul>
+<li>界面会用什么样的提示来告知用户它的功能和使用？</li>
+<li>为了防止出错你会提供怎样的限制？</li>
+<li>错误和警告信息是否能告知用户解决问题的方法？</li>
+<li>Toast是否承载过多的文字和重要信息</li>
+<li>当一个操作发生的时候，用户需要得到反馈</li>
+<li>在用户操作和界面反馈之间有多长的响应时间</li>
+<li>界面元素的尺寸是否适合操作</li>
+<li>显示限制，内容超出如何显示</li>
+<li>输入内容是明文还是暗文，比如密码</li>
+<li>搜索时输入错误，是否可以自动矫正</li>
+</ul>
+<p>内容来源于各处</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工作/" rel="tag"># 工作</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/08/死打工的/" rel="next" title="死打工的">
+                <i class="fa fa-chevron-left"></i> 死打工的
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/16/车载电台/" rel="prev" title="车载电台">
+                车载电台 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ggkai</p>
+              <p class="site-description motion-element" itemprop="description">重拾理想</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计检查表（上）"><span class="nav-number">1.</span> <span class="nav-text">设计检查表（上）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计检查表（下）"><span class="nav-number">2.</span> <span class="nav-text">设计检查表（下）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ggkai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
