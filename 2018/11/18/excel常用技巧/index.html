@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="工作,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="之前做excel顶多做个下拉菜单，合并单元格，再搞个筛选过滤，差不多就是我会的excel高级技能了，虽然很早就听说精通excel，很有用，很牛，工作中用得比较少，也就没什么动力学习。刚好，最近工作需要用excel做一些简单的数据处理和统计，遇到了一些问题，在网上找到解决方法后，就顺便做了一下笔记，方便以后在女朋友面前吹吹牛。">
+<meta name="keywords" content="工作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="excel常用技巧">
+<meta property="og:url" content="http://yoursite.com/2018/11/18/excel常用技巧/index.html">
+<meta property="og:site_name" content="ggkai&#39;s blogs">
+<meta property="og:description" content="之前做excel顶多做个下拉菜单，合并单元格，再搞个筛选过滤，差不多就是我会的excel高级技能了，虽然很早就听说精通excel，很有用，很牛，工作中用得比较少，也就没什么动力学习。刚好，最近工作需要用excel做一些简单的数据处理和统计，遇到了一些问题，在网上找到解决方法后，就顺便做了一下笔记，方便以后在女朋友面前吹吹牛。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-18T03:18:59.911Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="excel常用技巧">
+<meta name="twitter:description" content="之前做excel顶多做个下拉菜单，合并单元格，再搞个筛选过滤，差不多就是我会的excel高级技能了，虽然很早就听说精通excel，很有用，很牛，工作中用得比较少，也就没什么动力学习。刚好，最近工作需要用excel做一些简单的数据处理和统计，遇到了一些问题，在网上找到解决方法后，就顺便做了一下笔记，方便以后在女朋友面前吹吹牛。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/18/excel常用技巧/">
+
+
+
+
+
+  <title>excel常用技巧 | ggkai's blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ggkai's blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/18/excel常用技巧/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ggkai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ggkai's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">excel常用技巧</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-18T11:17:19+08:00">
+                2018-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>之前做excel顶多做个下拉菜单，合并单元格，再搞个筛选过滤，差不多就是我会的excel高级技能了，虽然很早就听说精通excel，很有用，很牛，工作中用得比较少，也就没什么动力学习。刚好，最近工作需要用excel做一些简单的数据处理和统计，遇到了一些问题，在网上找到解决方法后，就顺便做了一下笔记，方便以后在女朋友面前吹吹牛。<br><a id="more"></a></p>
+<h1 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h1><h3 id="分列"><a href="#分列" class="headerlink" title="分列"></a>分列</h3><p>分列功能可以将某一列按照特定规则拆分，比如按照“，”逗号对单元格进行拆分</p>
+<h3 id="空值填充"><a href="#空值填充" class="headerlink" title="空值填充"></a>空值填充</h3><p>第一步：找到空行。编辑&gt;查找&gt;定位条件&gt;空值<br>第二步：数字填充。输入填充内容&gt;Ctrl+Enter（在编辑状态）</p>
+<h3 id="数据去重"><a href="#数据去重" class="headerlink" title="数据去重"></a>数据去重</h3><p>数据&gt;删除重复项&gt;选择列</p>
+<h3 id="公式应用到一列"><a href="#公式应用到一列" class="headerlink" title="公式应用到一列"></a>公式应用到一列</h3><ul>
+<li>方法一：选择单元格右下角&gt;下拉填充</li>
+<li>方法二：编辑&gt;填充&gt;向下填充（按照首行规则进行填充）</li>
+<li>方法三：选择单元格&gt;点击fx框/F2进入编辑状态&gt;Ctrl+Enter（公式的单元格必须在四角，可向行列应用）</li>
+<li>方法四：选择一列&gt;Ctrl+D（把第一行，往下垂直应用，同一个公式）</li>
+<li>或者：选中单元格&gt;输入公式/内容&gt;Ctrl+Enter（将公式应用到所有单元格）</li>
+</ul>
+<h3 id="求标准差"><a href="#求标准差" class="headerlink" title="求标准差"></a>求标准差</h3><p>stdevpa求总体样本的标准差</p>
+<h3 id="将文本转换成数值"><a href="#将文本转换成数值" class="headerlink" title="将文本转换成数值"></a>将文本转换成数值</h3><ul>
+<li>方法一：选择，点击黄色感叹号，转换为数字</li>
+<li>方法二：数据&gt;分列&gt;下一步&gt;完成</li>
+</ul>
+<h3 id="千分位符号"><a href="#千分位符号" class="headerlink" title="千分位符号"></a>千分位符号</h3><p>选择单元格&gt;右键，选择设置单元格格式&gt;数字&gt;数值&gt;使用千位分隔符，可设置小数位数为0</p>
+<h3 id="文本转超链接"><a href="#文本转超链接" class="headerlink" title="文本转超链接"></a>文本转超链接</h3><p>=HYPERLINK(A1,”显示文字”)。如果HYPERLINK函数的链接指定本地路径，可以打开本地指定文件夹<br>注意：暂时不知道怎么样覆盖原始文本，只能暂时隐藏原始文本，仅显示超链接</p>
+<h3 id="在原始列上进行计算"><a href="#在原始列上进行计算" class="headerlink" title="在原始列上进行计算"></a>在原始列上进行计算</h3><p>复制数字&gt;选择原列的数据&gt;选择性粘贴&gt;选择乘法，即可</p>
+<h3 id="多个excel合并多个sheet"><a href="#多个excel合并多个sheet" class="headerlink" title="多个excel合并多个sheet"></a>多个excel合并多个sheet</h3><p>新建文件夹&gt;需要合并的excel复制到该文档目录下&gt;新建excel&gt;sheet表&gt;右键&gt;查看代码….执行代码<br><a href="https://jingyan.baidu.com/article/6181c3e0bd6274152ef1531e.html" target="_blank" rel="noopener">参考</a></p>
+<h3 id="多个sheet合并一个sheet"><a href="#多个sheet合并一个sheet" class="headerlink" title="多个sheet合并一个sheet"></a>多个sheet合并一个sheet</h3><p>新建sheet表&gt;sheet右键&gt;查看代码&gt;进入micsoft excel对象，选择当前sheet表&gt;visic basic编辑器&gt;输入代码，参考链接&gt;执行<br><a href="https://jingyan.baidu.com/article/19020a0ad8080d529d28422a.html" target="_blank" rel="noopener">参考：验证有效</a></p>
+<h3 id="多个excel合并一个sheet"><a href="#多个excel合并一个sheet" class="headerlink" title="多个excel合并一个sheet"></a>多个excel合并一个sheet</h3><p>数据&gt;新建查询&gt;选择【从文件】&gt;选择【从文件夹】&gt;输入文件路径，选择【合并和加载】（excel文件复制到一个文件夹下）<br>注意：未经过验证，mac版本的wps、excel都没有新建查询这个功能</p>
+<h1 id="数据透视表"><a href="#数据透视表" class="headerlink" title="数据透视表"></a>数据透视表</h1><h3 id="多层级分类汇总"><a href="#多层级分类汇总" class="headerlink" title="多层级分类汇总"></a>多层级分类汇总</h3><p>数据透视表的主要功能是将数据聚合，按照各字段进行sum( )，count( )的运算，实现数据快速分类汇总、排序查看。聚合功能有一点类似SQL中的gorupby，python中的pandas.pivot_table( )。</p>
+<h3 id="实现多层级"><a href="#实现多层级" class="headerlink" title="实现多层级"></a>实现多层级</h3><p>在列标签/行标签中加入多个数据字段，实现多层级，可以展开/折叠进行查看</p>
+<h3 id="实现降序、升序排列"><a href="#实现降序、升序排列" class="headerlink" title="实现降序、升序排列"></a>实现降序、升序排列</h3><p>选择按照列标签和行标签进行排序<br>1个字段，可以进行计数统计，按照计数进行排序</p>
+<h3 id="删除数据透视表"><a href="#删除数据透视表" class="headerlink" title="删除数据透视表"></a>删除数据透视表</h3><p>选择数据透视表单元格&gt;数据透视分析选项卡&gt;选择&gt;整个数据透视表&gt;删除</p>
+<h3 id="数据联动"><a href="#数据联动" class="headerlink" title="数据联动"></a>数据联动</h3><p>按字段对数据进行联动，实现多层级类别筛选过滤，数据统计的功能，举例查看什么人人在什么休假类型上休了多少天。<br>选中数据透视表任意单元格&gt;数据透视分析选项卡&gt;插入切片器&gt;选择需要联动的字段</p>
+<h3 id="去重计数"><a href="#去重计数" class="headerlink" title="去重计数"></a>去重计数</h3><p>注意excel的mac版本，没有非重复计数的功能</p>
+<ul>
+<li>方法一：创建数据透视表&gt;勾选“将此数据添加到数据模型”&gt;透视表生成器&gt;值字段设置&gt;非重复计数</li>
+<li>方法二：先去重，再统计</li>
+</ul>
+<h3 id="数据列按日期组合"><a href="#数据列按日期组合" class="headerlink" title="数据列按日期组合"></a>数据列按日期组合</h3><p>按日期汇总，比如一个月汇总数据。<br>透视表时间行标签&gt;创建组/&gt;选择月组合&gt;确定</p>
+<h3 id="数据列数值分段组合"><a href="#数据列数值分段组合" class="headerlink" title="数据列数值分段组合"></a>数据列数值分段组合</h3><p>按区间进行汇总，比如订单金额0-1000之间。<br>透视表数值列标签&gt;创建组/分组选择，分组字段&gt;选择开始、结束、步长&gt;</p>
+<h3 id="计算字段"><a href="#计算字段" class="headerlink" title="计算字段"></a>计算字段</h3><p>举例，按照地区计算公司利润，计算利润=销售额-成本<br>选择数据透视表的值&gt;透视表分析&gt;字段、项目和集&gt;计算字段&gt;插入计算字段</p>
+<h3 id="全额累加"><a href="#全额累加" class="headerlink" title="全额累加"></a>全额累加</h3><p>比如单月1月=10，2月=20，3月=30，累加即为1月=10，2月=30，3月=60，按某一个字段汇总，选择时间字段</p>
+<h3 id="按月拆分多个工作sheet表"><a href="#按月拆分多个工作sheet表" class="headerlink" title="按月拆分多个工作sheet表"></a>按月拆分多个工作sheet表</h3><p>利用数据透视表，把数据拆分为多个工作表。举例，把数据按月拆分不同的工作表，按地区拆分不同的表。<br>数据透视分析&gt;添加筛选器&gt;选择数据透视表单元格&gt;选项&gt;显示报表筛选页&gt;分页显示，选择字段&gt;确定，按照筛选器类别，生成多个sheet表<br>注意：需要有筛选器</p>
+<h1 id="图表可视化"><a href="#图表可视化" class="headerlink" title="图表可视化"></a>图表可视化</h1><h3 id="按照目的分类"><a href="#按照目的分类" class="headerlink" title="按照目的分类"></a>按照目的分类</h3><ul>
+<li>比较：进行分类比较，一般选择柱状图，时间连续一般选择曲线图，多维度的比较-般选择雷达图</li>
+<li>分布：在不同区间的分布情况，一般选择直方图</li>
+<li>关系：两个因素的相关关系，一般选择散点图</li>
+<li>构成：进行成分比重分析，一般选择饼状图，随时间变化的比重分析，一般选择堆积面积图、堆积柱状图</li>
+</ul>
+<h3 id="多系列柱状图"><a href="#多系列柱状图" class="headerlink" title="多系列柱状图"></a>多系列柱状图</h3><p>一列表示一个系列，一行多列表示多个系列。<br>选择数据&gt;系列&gt;输入名称，可以改系列名称</p>
+<h3 id="复合饼图"><a href="#复合饼图" class="headerlink" title="复合饼图"></a>复合饼图</h3><p>插入&gt;饼图，选择复合饼图&gt;设置数据系列格式&gt;设置第二绘图区的值，即第二层饼图有几个数，从后往前算<br>注意：把第二层饼图的数据放在最后</p>
+<h3 id="双层饼图"><a href="#双层饼图" class="headerlink" title="双层饼图"></a>双层饼图</h3><p>利用次坐标轴做双层饼图<br>选择第一层数据&gt;插入饼图&gt;选择数据源&gt;添加系列&gt;选择Y值区域，即第二层数据&gt;选择分类轴标签,即第二层分类&gt;设置数据系列格式&gt;选择次坐标轴&gt;往外拉动饼图缩小&gt;逐块移动饼图的位置&gt;添加数据标签&gt;设置数据标签格式，选择类别名称、值等</p>
+<h3 id="三层饼图"><a href="#三层饼图" class="headerlink" title="三层饼图"></a>三层饼图</h3><p>利用圆环图使用添加多个系列做多层圆环图/多层饼图<br>选择第一层数据&gt;插入圆环图&gt;选择数据源&gt;添加系列&gt;选择数据和分类&gt;添加多个系列&gt;选择某一层，更改图表类型&gt;选择饼图</p>
+<h1 id="常用技巧"><a href="#常用技巧" class="headerlink" title="常用技巧"></a>常用技巧</h1><h3 id="选择非空单元格"><a href="#选择非空单元格" class="headerlink" title="选择非空单元格"></a>选择非空单元格</h3><p>cmd+shift+方向箭头</p>
+<h3 id="找到空行"><a href="#找到空行" class="headerlink" title="找到空行"></a>找到空行</h3><ul>
+<li>方法一：数据&gt;筛选&gt;下拉列表中选择“空白” </li>
+<li>方法二：编辑&gt;查找&gt;定位条件&gt;空值 </li>
+</ul>
+<h3 id="单元格出现某个关键词次数"><a href="#单元格出现某个关键词次数" class="headerlink" title="单元格出现某个关键词次数"></a>单元格出现某个关键词次数</h3><p>通配符，<em>任意多个字符，？任意一个字符<br>=COUNTIF(A1:A5,”关键词”)等于关键词<br>=COUNTIF(A1,”\</em>关键词*“)包括关键词</p>
+<h3 id="判断单元格是否包含关键字"><a href="#判断单元格是否包含关键字" class="headerlink" title="判断单元格是否包含关键字"></a>判断单元格是否包含关键字</h3><p>=IF(COUNTIF(A1,”*关键字*“),”包含”,”不包括”)包含显示”包含”，不包含显示“不包含”<br>=IF(COUNTIF(A1,”*关键字*“)=1,”包含”,”不包括”)等于1表示，出现1次关键词</p>
+<h3 id="输入提醒"><a href="#输入提醒" class="headerlink" title="输入提醒"></a>输入提醒</h3><p>通过excel文件批量上传数据时，往往对输入有格式上的要求，有个输入提醒可以避免出错<br>验证&gt;输入数据&gt;标题+描述</p>
+<h3 id="自定义下拉菜单"><a href="#自定义下拉菜单" class="headerlink" title="自定义下拉菜单"></a>自定义下拉菜单</h3><p>数据有效性是一种约束，针对单元格限制其输入，让其只能输入固定几个值。<br>数据&gt;有效性/验证&gt;设置&gt;选择允许“列表”&gt;勾选“提供下拉箭头”&gt;源输入选项，英文逗号分隔<br>注意：wps中有一个插入下拉菜单的单独功能</p>
+<h3 id="按照条件求和"><a href="#按照条件求和" class="headerlink" title="按照条件求和"></a>按照条件求和</h3><p>=Sumif(条件区域，求和条件，实际求和区域)<br>参数sum_range（实际求和区域）可以不填，表示对条件区域复合条件的进行求和</p>
+<h3 id="计算某个类别的出现次数"><a href="#计算某个类别的出现次数" class="headerlink" title="计算某个类别的出现次数"></a>计算某个类别的出现次数</h3><p>数据&gt;分类汇总&gt;计数</p>
+<h3 id="多列排序"><a href="#多列排序" class="headerlink" title="多列排序"></a>多列排序</h3><p>如果一列出分类，一列是数字，排序时需要选择两列，否则一列的顺序变了，另外一列的顺序没变，导致数据顺序错开，谨慎对一列进行排序。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工作/" rel="tag"># 工作</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/03/git初学/" rel="next" title="git初学">
+                <i class="fa fa-chevron-left"></i> git初学
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ggkai</p>
+              <p class="site-description motion-element" itemprop="description">BON</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据处理"><span class="nav-number">1.</span> <span class="nav-text">数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分列"><span class="nav-number">1.0.1.</span> <span class="nav-text">分列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空值填充"><span class="nav-number">1.0.2.</span> <span class="nav-text">空值填充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据去重"><span class="nav-number">1.0.3.</span> <span class="nav-text">数据去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公式应用到一列"><span class="nav-number">1.0.4.</span> <span class="nav-text">公式应用到一列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求标准差"><span class="nav-number">1.0.5.</span> <span class="nav-text">求标准差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将文本转换成数值"><span class="nav-number">1.0.6.</span> <span class="nav-text">将文本转换成数值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#千分位符号"><span class="nav-number">1.0.7.</span> <span class="nav-text">千分位符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本转超链接"><span class="nav-number">1.0.8.</span> <span class="nav-text">文本转超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在原始列上进行计算"><span class="nav-number">1.0.9.</span> <span class="nav-text">在原始列上进行计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个excel合并多个sheet"><span class="nav-number">1.0.10.</span> <span class="nav-text">多个excel合并多个sheet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个sheet合并一个sheet"><span class="nav-number">1.0.11.</span> <span class="nav-text">多个sheet合并一个sheet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个excel合并一个sheet"><span class="nav-number">1.0.12.</span> <span class="nav-text">多个excel合并一个sheet</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#数据透视表"><span class="nav-number">2.</span> <span class="nav-text">数据透视表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多层级分类汇总"><span class="nav-number">2.0.1.</span> <span class="nav-text">多层级分类汇总</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现多层级"><span class="nav-number">2.0.2.</span> <span class="nav-text">实现多层级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现降序、升序排列"><span class="nav-number">2.0.3.</span> <span class="nav-text">实现降序、升序排列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据透视表"><span class="nav-number">2.0.4.</span> <span class="nav-text">删除数据透视表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据联动"><span class="nav-number">2.0.5.</span> <span class="nav-text">数据联动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#去重计数"><span class="nav-number">2.0.6.</span> <span class="nav-text">去重计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据列按日期组合"><span class="nav-number">2.0.7.</span> <span class="nav-text">数据列按日期组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据列数值分段组合"><span class="nav-number">2.0.8.</span> <span class="nav-text">数据列数值分段组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算字段"><span class="nav-number">2.0.9.</span> <span class="nav-text">计算字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全额累加"><span class="nav-number">2.0.10.</span> <span class="nav-text">全额累加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按月拆分多个工作sheet表"><span class="nav-number">2.0.11.</span> <span class="nav-text">按月拆分多个工作sheet表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图表可视化"><span class="nav-number">3.</span> <span class="nav-text">图表可视化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#按照目的分类"><span class="nav-number">3.0.1.</span> <span class="nav-text">按照目的分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多系列柱状图"><span class="nav-number">3.0.2.</span> <span class="nav-text">多系列柱状图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复合饼图"><span class="nav-number">3.0.3.</span> <span class="nav-text">复合饼图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双层饼图"><span class="nav-number">3.0.4.</span> <span class="nav-text">双层饼图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三层饼图"><span class="nav-number">3.0.5.</span> <span class="nav-text">三层饼图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用技巧"><span class="nav-number">4.</span> <span class="nav-text">常用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择非空单元格"><span class="nav-number">4.0.1.</span> <span class="nav-text">选择非空单元格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#找到空行"><span class="nav-number">4.0.2.</span> <span class="nav-text">找到空行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单元格出现某个关键词次数"><span class="nav-number">4.0.3.</span> <span class="nav-text">单元格出现某个关键词次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断单元格是否包含关键字"><span class="nav-number">4.0.4.</span> <span class="nav-text">判断单元格是否包含关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入提醒"><span class="nav-number">4.0.5.</span> <span class="nav-text">输入提醒</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义下拉菜单"><span class="nav-number">4.0.6.</span> <span class="nav-text">自定义下拉菜单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按照条件求和"><span class="nav-number">4.0.7.</span> <span class="nav-text">按照条件求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算某个类别的出现次数"><span class="nav-number">4.0.8.</span> <span class="nav-text">计算某个类别的出现次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多列排序"><span class="nav-number">4.0.9.</span> <span class="nav-text">多列排序</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ggkai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
